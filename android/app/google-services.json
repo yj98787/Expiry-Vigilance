@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "677787840184",
+    "project_id": "expiry-vigilance",
+    "storage_bucket": "expiry-vigilance.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:677787840184:android:4ae067495395a5f5eece4d",
+        "android_client_info": {
+          "package_name": "com.example.expiry_vigilance"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOiSLbSz1R0YCCcKxf-7N8XTAf5GEEPqg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
