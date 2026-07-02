@@ -116,21 +116,21 @@ class _SignupScreenState extends State<SignupScreen> {
                 ),
               ),
 
-              CommonTextfield(
+              CommonTextField(
                 labelText: 'Full Name',
                 hintText: "Name",
                 suffixIcon: Icons.person,
                 controller: fullNameController,
               ),
               SizedBox(height: 10),
-              CommonTextfield(
+              CommonTextField(
                 labelText: 'Email',
                 hintText: 'abc@gmail.com',
                 suffixIcon: Icons.mail_outlined,
                 controller: emailController,
               ),
               SizedBox(height: 10),
-              CommonTextfield(
+              CommonTextField(
                 labelText: 'Password',
                 hintText: 'password',
                 suffixIcon: (hidePassword)?Icons.visibility_off:Icons.visibility,
@@ -139,7 +139,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 onSuffixTap: togglePasswordText,
               ),
               SizedBox(height: 10),
-              CommonTextfield(
+              CommonTextField(
                 labelText: 'Confirm Password',
                 hintText: 'Confirm password',
                 suffixIcon: (hideConfirmPassword)?Icons.visibility_off:Icons.visibility,

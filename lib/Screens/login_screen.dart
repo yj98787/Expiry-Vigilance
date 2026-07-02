@@ -92,14 +92,14 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
 
-              CommonTextfield(
+              CommonTextField(
                   labelText: 'Email',
                   hintText: 'abc@gmail.com',
                   suffixIcon: Icons.mail_outlined,
                   controller: emailController,
               ),
               SizedBox(height: 10,),
-              CommonTextfield(
+              CommonTextField(
                   labelText: 'Password',
                   hintText: 'password',
                   suffixIcon: (isObscure)?Icons.visibility_off:Icons.remove_red_eye_outlined,

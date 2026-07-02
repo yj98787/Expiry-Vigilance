@@ -1,0 +1,52 @@
+mutation SeedDatabase @transaction {
+  user_insertMany(data: [
+    {
+      id: "550e8400-e29b-41d4-a716-446655440000",
+      email: "alice@example.com",
+      displayName: "Alice"
+    },
+    {
+      id: "550e8400-e29b-41d4-a716-446655440001",
+      email: "bob@example.com",
+      displayName: "Bob"
+    }
+  ])
+  product_insertMany(data: [
+    {
+      id: "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+      name: "Milk",
+      barcode: "123456789012"
+    },
+    {
+      id: "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a12",
+      name: "Bread",
+      barcode: "987654321098"
+    }
+  ])
+  category_insertMany(data: [
+    {
+      id: "b1f8bc99-9c0b-4ef8-bb6d-6bb9bd380b22",
+      name: "Dairy"
+    },
+    {
+      id: "b1f8bc99-9c0b-4ef8-bb6d-6bb9bd380b23",
+      name: "Bakery"
+    }
+  ])
+  inventoryItem_insertMany(data: [
+    {
+      expiryDate: "2024-12-31",
+      quantity: 2,
+      userId: "550e8400-e29b-41d4-a716-446655440000",
+      productId: "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+      categoryId: "b1f8bc99-9c0b-4ef8-bb6d-6bb9bd380b22"
+    },
+    {
+      expiryDate: "2024-11-15",
+      quantity: 1,
+      userId: "550e8400-e29b-41d4-a716-446655440001",
+      productId: "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a12",
+      categoryId: "b1f8bc99-9c0b-4ef8-bb6d-6bb9bd380b23"
+    }
+  ])
+}

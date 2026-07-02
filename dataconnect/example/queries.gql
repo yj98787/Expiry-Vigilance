@@ -1,0 +1,51 @@
+mutation CreateInventoryItem(
+  $expiryDate: Date!,
+  $quantity: Int!,
+  $productId: UUID,
+  $categoryId: UUID
+) @auth(level: USER) {
+  inventoryItem_insert(data: {
+    expiryDate: $expiryDate,
+    quantity: $quantity,
+    productId: $productId,
+    categoryId: $categoryId,
+    userId_expr: "auth.uid"
+  })
+}
+
+mutation UpdateInventoryItem(
+  $id: UUID!,
+  $quantity: Int
+) @auth(level: USER) {
+  inventoryItem_update(
+    key: { id: $id },
+    data: { quantity: $quantity }
+  )
+}
+
+query ListMyInventory @auth(level: USER) {
+  inventoryItems(where: { userId: { eq_expr: "auth.uid" } }) {
+    id
+    expiryDate
+    quantity
+    product {
+      name
+      brand
+    }
+    category {
+      name
+    }
+  }
+}
+
+mutation LogNotification(
+  $inventoryItemId: UUID!,
+  $status: String
+) @auth(level: USER) {
+  notificationLog_insert(data: {
+    inventoryItemId: $inventoryItemId,
+    status: $status,
+    userId_expr: "auth.uid",
+    sentAt_expr: "request.time"
+  })
+}

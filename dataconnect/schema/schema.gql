@@ -1,0 +1,34 @@
+type User @table {
+  email: String!
+  displayName: String!
+  preferredAlertLeadTimeDays: Int
+}
+
+type Category @table {
+  name: String!
+  iconUrl: String
+}
+
+type Product @table {
+  name: String!
+  barcode: String!
+  brand: String
+  defaultShelfLifeDays: Int
+}
+
+type InventoryItem @table {
+  expiryDate: Date!
+  quantity: Int!
+  purchaseDate: Date
+  status: String
+  user: User!
+  category: Category
+  product: Product
+}
+
+type NotificationLog @table {
+  sentAt: Timestamp!
+  status: String
+  user: User!
+  inventoryItem: InventoryItem!
+}

@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:expiry_vigilance/Models/user_model.dart';
 import 'package:expiry_vigilance/Provider/add_product_screen_provider.dart';
@@ -23,7 +21,11 @@ class ProductDescriptionScreen extends StatefulWidget {
     required this.userModel,
     required this.firebaseUser,
     required this.expiryDate,
-    required this.productName, required this.selectValue, required this.description, required this.imageUrl, required this.createdOn,
+    required this.productName,
+    required this.selectValue,
+    required this.description,
+    required this.imageUrl,
+    required this.createdOn
   }) : super(key: key);
 
   @override

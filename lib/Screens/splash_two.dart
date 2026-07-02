@@ -26,7 +26,7 @@ class _SplashScreenTwoState extends State<SplashScreenTwo> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    NotificationServices.checkAndScheduleExpiryNotifications(widget.firebaseUser.uid);
+    //NotificationServices.checkAndScheduleExpiryNotifications(widget.firebaseUser.uid);
     Timer(Duration(seconds: 3),(){
       Navigator.pushReplacement(
         context,

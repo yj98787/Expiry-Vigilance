@@ -2,15 +2,12 @@ import 'dart:developer';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:timezone/timezone.dart' as tz;
-import 'package:timezone/data/latest_all.dart' as tz;
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 class NotificationServices {
   static final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
       FlutterLocalNotificationsPlugin();
 
-  static Future<void> initialize() async {
+  /*static Future<void> initialize() async {
     tz.initializeTimeZones();
 
     const AndroidInitializationSettings androidSettings =
@@ -28,7 +25,7 @@ class NotificationServices {
           AndroidFlutterLocalNotificationsPlugin
         >()
         ?.requestNotificationsPermission();
-  }
+  }*/
 
   static Future<void> showInstantNotification({
     required int id,
@@ -195,3 +192,4 @@ class NotificationServices {
     }
   }
 }
+

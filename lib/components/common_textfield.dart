@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CommonTextfield extends StatelessWidget {
+class CommonTextField extends StatelessWidget {
   final String labelText;
   final String hintText;
   final IconData suffixIcon;
@@ -8,7 +8,7 @@ class CommonTextfield extends StatelessWidget {
   final TextEditingController controller;
   final VoidCallback? onSuffixTap;
 
-  const CommonTextfield({
+  const CommonTextField({
     super.key,
     required this.labelText,
     required this.hintText,
